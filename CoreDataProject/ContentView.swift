@@ -6,11 +6,12 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct ContentView: View {
     @Environment(\.managedObjectContext) var moc
     
-    @FetchRequest(sortDescriptors: []) var wizards: FetchedResults<Wizard>
+    @FetchRequest(sortDescriptors: [], predicate: nil) var wizards: FetchedResults<Wizard>
     
     var body: some View {
         VStack {
